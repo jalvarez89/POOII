@@ -1,3 +1,8 @@
+clase capitulo
+    definir numero como entero
+    definir descripcion como caracter
+fin clase
+--------------------------------------------------------------------------------
 clase libro
     definir nombre como caracter
     definir autor como caracter
@@ -7,11 +12,12 @@ clase libro
     definir tipo como caracter
     definir ilustrado como logico
     definir precio como numerico
-
+    definir capitulos como coleccion<capitulo>
     publico metodo calcularIva()
         definir iva como numerico
         iva=precio*0.50
         precio=precio+iva
+    fin metodo
     publico metodo libro()
         nombre="Sin Nombre"
         autor="Sin Autor"
@@ -20,7 +26,7 @@ clase libro
         fecha=0
         tipo="Sin Tipo"
         ilustrado=null
-    fin metodo
+     fin metodo
     publico metodo libro(nombre,autor,editorial,cantidadp,fecha,tipo,ilustrado)
         nombre="POO"
         autor="CADIF1"
@@ -31,8 +37,10 @@ clase libro
         ilustrado=Verdadero
     fin metodo
 fin clase
+--------------------------------------------------------------------------------
 algoritmo Practica3
     definir libro1 como libro
+    definir libros como coleccion<libro>
     libro1=new libro()
     libro1=new libro("POO","CADIF1","EDITORIAL 1",35,04102018,"Computacion",Verdadero)
     libro1.calcularIva()
